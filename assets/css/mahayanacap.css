@@ -321,7 +321,7 @@ html[lang="zh-TW"] .featured-copy h2 { font-size: clamp(32px, 3vw, 44px); white-
 }
 .markets-hero-minimal {
   min-height: auto;
-  padding-bottom: 35px;
+  padding: 24px 4vw;
   border-bottom: 0;
 }
 .markets-feed { padding: 70px 4vw 130px; }
@@ -378,6 +378,7 @@ html[lang="zh-TW"] .featured-copy h2 { font-size: clamp(32px, 3vw, 44px); white-
   .insight-newsletter { padding: 80px 20px; }
   .markets-directory { padding-top: 72px; }
   .markets-hero { min-height: 460px; padding: 80px 20px 60px; }
+  .markets-hero-minimal { min-height: auto; padding: 20px; }
   .markets-hero p { margin: 0; }
   .markets-feed { padding: 55px 20px 90px; }
   .markets-feed-shell { min-height: 760px; padding-top: 24px; }
