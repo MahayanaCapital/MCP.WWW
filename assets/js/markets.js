@@ -5,10 +5,9 @@
   const locale = grid.dataset.locale || 'en';
   const labels = {
     en: ['Americas', 'Europe', 'Asia Pacific', 'Emerging Markets'],
-    'zh-CN': ['美洲市场', '欧洲市场', '亚太市场', '新兴市场'],
     'zh-TW': ['美洲市場', '歐洲市場', '亞太市場', '新興市場']
   }[locale] || ['Americas', 'Europe', 'Asia Pacific', 'Emerging Markets'];
-  const tvLocale = { 'zh-CN': 'zh_CN', 'zh-TW': 'zh_TW' }[locale] || 'en';
+  const tvLocale = { 'zh-TW': 'zh_TW' }[locale] || 'en';
   const regions = [
     [
       ['FOREXCOM:SPXUSD', 'S&P 500'], ['NASDAQ:NDX', 'Nasdaq 100'],
