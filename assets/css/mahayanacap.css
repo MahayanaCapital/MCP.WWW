@@ -110,15 +110,15 @@ main{overflow:hidden}
 
 .story{display:grid;grid-template-columns:220px 1fr 40px;gap:40px;align-items:center;border-top:1px solid rgba(255,255,255,.2);padding:25px 0}
 
-.story-thumb{height:130px;display:grid;place-items:center;overflow:hidden}
+.story-thumb{height:130px;display:grid;place-items:center;overflow:hidden;background-position:center;background-size:cover;background-repeat:no-repeat}
 
-.story-thumb span{font:italic 60px var(--serif);opacity:.45}
+.story-thumb span{display:none}
 
-.story-thumb.violet{background:linear-gradient(135deg,#4e315c,#b08da8)}
+.story-thumb.violet{background-image:url('../img/insights/intelligence-moat.webp')}
 
-.story-thumb.gold{background:linear-gradient(135deg,#60401e,#e1b766)}
+.story-thumb.gold{background-image:url('../img/insights/complexity-to-simplicity.webp')}
 
-.story-thumb.blue{background:linear-gradient(135deg,#172e47,#6290a8)}
+.story-thumb.blue{background-image:url('../img/insights/code-to-era.webp')}
 
 .story-text>span{font-size:11px;letter-spacing:.12em;opacity:.6}
 
