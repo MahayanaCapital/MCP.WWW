@@ -18,9 +18,13 @@
       <h1>The market,<br>in motion.</h1>
       <p>Live signals, financial news, and market developments shaping the global investment landscape.</p>
     </section>
-    <section class="markets-feed container-fluid" aria-label="Financial market updates">
-      <div class="markets-feed-shell">
-        <rssapp-wall id="ta2i8DkDsv0u7Ggt"></rssapp-wall><script src="https://widget.rss.app/v1/wall.js" type="text/javascript" async></script>
+    <section class="markets-feed container-fluid" aria-label="Global stock market overview">
+      <div class="markets-section-head"><span class="eyebrow">GLOBAL MARKET OVERVIEW</span><p>Select an index to view its latest chart. Quotes may be delayed under exchange rules.</p></div>
+      <div class="markets-feed-shell tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+        {"colorTheme":"light","dateRange":"1M","locale":"en","largeChartUrl":"","isTransparent":true,"showFloatingTooltip":true,"showSymbolLogo":true,"showChart":true,"width":"100%","height":"820","tabs":[{"title":"Americas","symbols":[{"s":"FOREXCOM:SPXUSD","d":"S&P 500"},{"s":"NASDAQ:NDX","d":"Nasdaq 100"},{"s":"FOREXCOM:DJI","d":"Dow Jones Industrial Average"},{"s":"TSX:TSX","d":"Canada S&P/TSX"},{"s":"BMFBOVESPA:IBOV","d":"Brazil Bovespa"},{"s":"BMV:ME","d":"Mexico IPC"}]},{"title":"Europe","symbols":[{"s":"INDEX:DEU40","d":"Germany DAX"},{"s":"TVC:UKX","d":"UK FTSE 100"},{"s":"EURONEXT:PX1","d":"France CAC 40"},{"s":"BME:IBC","d":"Spain IBEX 35"},{"s":"MIL:FTSEMIB","d":"Italy FTSE MIB"},{"s":"SIX:SMI","d":"Switzerland SMI"}]},{"title":"Asia Pacific","symbols":[{"s":"SSE:000001","d":"Shanghai Composite"},{"s":"HKEX:HSI","d":"Hong Kong Hang Seng"},{"s":"INDEX:NKY","d":"Japan Nikkei 225"},{"s":"KRX:KOSPI","d":"Korea KOSPI"},{"s":"TWSE:TAIEX","d":"Taiwan Weighted"},{"s":"ASX:XJO","d":"Australia ASX 200"}]},{"title":"Emerging","symbols":[{"s":"NSE:NIFTY","d":"India Nifty 50"},{"s":"BIST:XU100","d":"Türkiye BIST 100"},{"s":"TADAWUL:TASI","d":"Saudi Arabia TASI"},{"s":"IDX:COMPOSITE","d":"Indonesia Composite"},{"s":"SET:SET","d":"Thailand SET"},{"s":"JSE:J200","d":"South Africa Top 40"}]}]}
+        </script>
       </div>
     </section>
   </main>

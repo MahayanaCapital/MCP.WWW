@@ -18,9 +18,13 @@
       <h1>洞察市场，<br>把握变化。</h1>
       <p>持续追踪全球金融市场、资本流动与产业变化中的重要信号。</p>
     </section>
-    <section class="markets-feed container-fluid" aria-label="金融市场动态">
-      <div class="markets-feed-shell">
-        <rssapp-wall id="ta2i8DkDsv0u7Ggt"></rssapp-wall><script src="https://widget.rss.app/v1/wall.js" type="text/javascript" async></script>
+    <section class="markets-feed container-fluid" aria-label="全球证券市场行情">
+      <div class="markets-section-head"><span class="eyebrow">GLOBAL MARKET OVERVIEW / 全球大盘</span><p>点击指数名称切换最新走势图。行情可能因交易所规则略有延迟。</p></div>
+      <div class="markets-feed-shell tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+        {"colorTheme":"light","dateRange":"1M","locale":"zh_CN","largeChartUrl":"","isTransparent":true,"showFloatingTooltip":true,"showSymbolLogo":true,"showChart":true,"width":"100%","height":"820","tabs":[{"title":"美洲","symbols":[{"s":"FOREXCOM:SPXUSD","d":"标普 500"},{"s":"NASDAQ:NDX","d":"纳斯达克 100"},{"s":"FOREXCOM:DJI","d":"道琼斯工业指数"},{"s":"TSX:TSX","d":"加拿大 S&P/TSX"},{"s":"BMFBOVESPA:IBOV","d":"巴西 Bovespa"},{"s":"BMV:ME","d":"墨西哥 IPC"}]},{"title":"欧洲","symbols":[{"s":"INDEX:DEU40","d":"德国 DAX"},{"s":"TVC:UKX","d":"英国富时 100"},{"s":"EURONEXT:PX1","d":"法国 CAC 40"},{"s":"BME:IBC","d":"西班牙 IBEX 35"},{"s":"MIL:FTSEMIB","d":"意大利 FTSE MIB"},{"s":"SIX:SMI","d":"瑞士 SMI"}]},{"title":"亚太","symbols":[{"s":"SSE:000001","d":"上证指数"},{"s":"HKEX:HSI","d":"香港恒生指数"},{"s":"INDEX:NKY","d":"日经 225"},{"s":"KRX:KOSPI","d":"韩国 KOSPI"},{"s":"TWSE:TAIEX","d":"台湾加权指数"},{"s":"ASX:XJO","d":"澳大利亚 ASX 200"}]},{"title":"新兴市场","symbols":[{"s":"NSE:NIFTY","d":"印度 Nifty 50"},{"s":"BIST:XU100","d":"土耳其 BIST 100"},{"s":"TADAWUL:TASI","d":"沙特 TASI"},{"s":"IDX:COMPOSITE","d":"印尼综合指数"},{"s":"SET:SET","d":"泰国 SET"},{"s":"JSE:J200","d":"南非 Top 40"}]}]}
+        </script>
       </div>
     </section>
   </main>

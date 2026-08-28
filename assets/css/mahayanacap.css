@@ -320,11 +320,27 @@ html[lang="zh-TW"] .featured-copy h2 { font-size: clamp(32px, 3vw, 44px); white-
   font: 400 18px/1.8 var(--serif);
 }
 .markets-feed { padding: 70px 4vw 130px; }
+.markets-section-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--line);
+}
+.markets-section-head p {
+  max-width: 520px;
+  margin: 0;
+  color: #6e5b55;
+  font-size: 13px;
+  line-height: 1.7;
+  text-align: right;
+}
 .markets-feed-shell {
-  min-height: 720px;
+  min-height: 820px;
   padding-top: 34px;
 }
-.markets-feed-shell rssapp-wall { display: block; width: 100%; min-height: 680px; }
+.markets-feed-shell .tradingview-widget-container__widget { width: 100%; min-height: 820px; }
 @media (max-width: 800px) {
   .site-logo { width: 190px; }
   .lang-switch + .lang-switch { margin-left: 0; }
@@ -355,7 +371,9 @@ html[lang="zh-TW"] .featured-copy h2 { font-size: clamp(32px, 3vw, 44px); white-
   .markets-hero { min-height: 460px; padding: 80px 20px 60px; }
   .markets-hero p { margin: 0; }
   .markets-feed { padding: 55px 20px 90px; }
-  .markets-feed-shell { min-height: 560px; padding-top: 24px; }
+  .markets-section-head { align-items: flex-start; flex-direction: column; gap: 16px; }
+  .markets-section-head p { text-align: left; }
+  .markets-feed-shell { min-height: 760px; padding-top: 24px; }
 }
 @media (max-width: 991px) {
   .team-grid,
