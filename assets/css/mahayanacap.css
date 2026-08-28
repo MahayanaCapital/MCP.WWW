@@ -146,7 +146,7 @@ footer{background:#160a09;color:#eee1d6;padding:110px 4vw 38px}
 
 .footer-main>a{border:1px solid #765851;padding:18px 22px;border-radius:999px}
 
-.footer-bottom{border-top:1px solid #493936;padding-top:30px;display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#8b7770}
+.footer-bottom{border-top:1px solid #493936;padding-top:30px;display:flex;justify-content:space-between;align-items:center;font-size:16px;color:#8b7770}
 
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
 
@@ -289,12 +289,18 @@ html[lang="zh-TW"] .featured-copy h2 { font-size: clamp(32px, 3vw, 44px); white-
 .insight-filter button { border: 1px solid var(--line); background: transparent; border-radius: 999px; padding: 10px 16px; color: var(--ink); font: 500 12px var(--sans); cursor: pointer; }
 .insight-filter button.active, .insight-filter button:hover { background: var(--wine); border-color: var(--wine); color: #fff; }
 .insight-card[hidden] { display: none !important; }
-.insight-art { aspect-ratio: 16/10; display: grid; place-items: center; overflow: hidden; }
-.insight-art span { font: italic 600 62px var(--serif); color: rgba(255,255,255,.68); }
+.insight-art { aspect-ratio: 16/10; display: grid; place-items: center; overflow: hidden; background-position: center; background-size: cover; background-repeat: no-repeat; }
+.insight-art span { display: none; }
 .insight-ai { background: radial-gradient(circle at 65% 40%,#d2afbb,transparent 18%),linear-gradient(135deg,#34213d,#7b4662); }
 .insight-markets { background: conic-gradient(from 40deg,#22364c,#b57c53,#e2c28d,#22364c); }
 .insight-health { background: radial-gradient(circle at 30% 30%,#d7efea,transparent 20%),linear-gradient(145deg,#285b5a,#8abbb1); }
 .insight-climate { background: radial-gradient(circle at 70% 30%,#f2c66d,transparent 18%),linear-gradient(145deg,#284b43,#87a868); }
+.insight-card-01 { background-image: url('../img/insights/cards/01-ai-moat.webp'); }
+.insight-card-02 { background-image: url('../img/insights/cards/02-global-capital-outlook.webp'); }
+.insight-card-03 { background-image: url('../img/insights/cards/03-computational-biology.webp'); }
+.insight-card-04 { background-image: url('../img/insights/cards/04-ai-power-demand.webp'); }
+.insight-card-05 { background-image: url('../img/insights/cards/05-lab-to-global-product.webp'); }
+.insight-card-06 { background-image: url('../img/insights/cards/06-long-term-capital.webp'); }
 .insight-meta { padding: 24px 8px 42px 0; }
 .insight-meta>span { font-size: 10px; letter-spacing: .12em; color: #816d66; }
 .insight-meta h2 { font: 600 25px/1.35 var(--serif); margin: 16px 0; }
