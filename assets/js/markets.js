@@ -46,7 +46,7 @@
     script.async = true;
     script.textContent = JSON.stringify({
       colorTheme: 'light', dateRange: '1M', locale: tvLocale, largeChartUrl: '',
-      isTransparent: true, showFloatingTooltip: true, showSymbolLogo: true,
+      isTransparent: true, showFloatingTooltip: true, showSymbolLogo: false,
       showChart: true, width: '100%', height: '560',
       tabs: [{ title: labels[index], symbols: symbols.map(([s, d]) => ({ s, d })) }]
     });

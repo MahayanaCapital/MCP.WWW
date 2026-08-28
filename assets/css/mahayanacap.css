@@ -361,6 +361,10 @@ html[lang="zh-TW"] .featured-copy h2 { font-size: clamp(32px, 3vw, 44px); white-
 }
 .market-region-panel .tradingview-widget-container,
 .market-region-panel .tradingview-widget-container__widget { width: 100%; min-height: 560px; }
+.markets-page .tradingview-widget-copyright,
+.markets-page #tradingview-copyright,
+.markets-page #tradingview-quotes,
+.markets-page .tradingview-widget-container > a { display: none !important; }
 
 /* Insight article */
 .article-page { background: var(--paper); color: var(--ink); }
