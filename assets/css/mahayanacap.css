@@ -234,7 +234,7 @@ footer .nav-link { color: #fff !important; }
 .team-hero h1 { font: 600 clamp(64px, 10vw, 148px)/1 var(--serif); letter-spacing: -.065em; margin: 45px 0 55px; }
 .team-hero p { width: auto; margin: 0 0 0 auto; font: 400 18px/1.8 var(--serif); white-space: nowrap; }
 .team-hero-minimal { padding: 40px 4vw; border-bottom: 0; }
-.team-browser { padding: 55px 4vw 140px; }
+.team-browser { padding: 0 4vw 140px; }
 .team-filter { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 55px; }
 .team-filter button { border: 1px solid var(--line); background: transparent; border-radius: 999px; padding: 11px 18px; color: var(--ink); font: 500 12px var(--sans); cursor: pointer; }
 .team-filter button.active, .team-filter button:hover { background: var(--wine); border-color: var(--wine); color: #fff; }
@@ -365,7 +365,7 @@ html[lang="zh-TW"] .featured-copy h2 { font-size: clamp(32px, 3vw, 44px); white-
   .team-hero { padding: 80px 20px 65px; }
   .team-hero-minimal { padding: 40px 20px; }
   .team-hero p { margin: 0; white-space: normal; }
-  .team-browser { padding: 35px 20px 90px; }
+  .team-browser { padding: 0 20px 90px; }
   .insights-directory { padding-top: 72px; }
   .insights-hero { min-height: 540px; padding: 80px 20px 60px; }
   .insights-hero p { margin: 0; white-space: normal; }
