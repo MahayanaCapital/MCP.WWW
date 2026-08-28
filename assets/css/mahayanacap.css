@@ -245,6 +245,7 @@ footer .nav-link { color: #fff !important; }
   gap: 24px;
   margin: 0;
 }
+.team-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
 .team-grid > .team-member,
 .insight-grid > .insight-card {
   width: 100%;
@@ -264,7 +265,7 @@ footer .nav-link { color: #fff !important; }
 .portrait-4 { background: linear-gradient(145deg,#6d4c24,#d4ad69); }
 .member-meta { position: relative; border-top: 1px solid var(--line); padding: 18px 36px 26px 0; }
 .member-meta span { font-size: 11px; color: #816d66; }
-.member-meta h2 { font: 600 27px var(--serif); margin: 12px 0 0; }
+.member-meta h2 { font: 600 clamp(20px, 1.6vw, 27px) var(--serif); margin: 12px 0 0; }
 .member-meta b { position: absolute; right: 4px; top: 18px; }
 .insights-page { background: var(--paper); }
 .insights-directory { padding-top: 92px; }
