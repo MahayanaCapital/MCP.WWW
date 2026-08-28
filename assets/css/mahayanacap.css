@@ -84,17 +84,17 @@ main{overflow:hidden}
 
 .company-card{background:var(--paper)}
 
-.company-art{height:430px;display:grid;place-items:center;overflow:hidden}
+.company-art{height:430px;display:grid;place-items:center;overflow:hidden;background-position:center;background-size:cover;background-repeat:no-repeat}
 
-.company-art span{font:600 clamp(120px,20vw,280px)/1 var(--serif);color:rgba(255,255,255,.83);text-shadow:0 20px 60px rgba(0,0,0,.15);transform:rotate(-8deg)}
+.company-art span{display:none}
 
-.nova .company-art{background:radial-gradient(circle at 50% 45%,#edd4b1,transparent 6%),radial-gradient(circle,#633444,#161326 70%)}
+.nova .company-art{background-image:url('../img/companies/nova-ai.webp')}
 
-.arc .company-art{background:conic-gradient(from 180deg at 50% 80%,#f6ce86,#9e4c36,#1c3151,#f6ce86)}
+.arc .company-art{background-image:url('../img/companies/arclight-energy.webp')}
 
-.solace .company-art{background:radial-gradient(ellipse at 20% 30%,#d8eef0,transparent 30%),linear-gradient(135deg,#366363,#9bc5bb)}
+.solace .company-art{background-image:url('../img/companies/solace-life-sciences.webp')}
 
-.orbital .company-art{background:radial-gradient(circle at 70% 30%,#f4a34a,transparent 17%),linear-gradient(140deg,#11182b,#44516f)}
+.orbital .company-art{background-image:url('../img/companies/orbital-manufacturing.webp')}
 
 .company-info{padding:28px 28px 34px;position:relative}
 
