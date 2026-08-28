@@ -324,7 +324,7 @@ html[lang="zh-TW"] .featured-copy h2 { font-size: clamp(32px, 3vw, 44px); white-
   padding: 24px 4vw;
   border-bottom: 0;
 }
-.markets-feed { padding: 70px 4vw 130px; }
+.markets-feed { padding: 0 4vw 130px; }
 .markets-feed-shell {
   min-height: 820px;
   padding-top: 34px;
@@ -334,7 +334,7 @@ html[lang="zh-TW"] .featured-copy h2 { font-size: clamp(32px, 3vw, 44px); white-
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 28px;
-  padding-top: 34px;
+  padding-top: 0;
 }
 .market-region-panel {
   min-width: 0;
@@ -380,9 +380,9 @@ html[lang="zh-TW"] .featured-copy h2 { font-size: clamp(32px, 3vw, 44px); white-
   .markets-hero { min-height: 460px; padding: 80px 20px 60px; }
   .markets-hero-minimal { min-height: auto; padding: 20px; }
   .markets-hero p { margin: 0; }
-  .markets-feed { padding: 55px 20px 90px; }
+  .markets-feed { padding: 0 20px 90px; }
   .markets-feed-shell { min-height: 760px; padding-top: 24px; }
-  .global-market-grid { grid-template-columns: 1fr; gap: 20px; padding-top: 24px; }
+  .global-market-grid { grid-template-columns: 1fr; gap: 20px; padding-top: 0; }
 }
 @media (max-width: 991px) {
   .team-grid,
