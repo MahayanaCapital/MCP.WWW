@@ -273,7 +273,7 @@ footer .nav-link { color: #fff !important; }
 .insights-hero h1 { font: 600 clamp(58px, 8.5vw, 126px)/1.02 var(--serif); letter-spacing: -.06em; margin: 45px 0; }
 .insights-hero p { width: auto; margin: 0 0 0 auto; font: 400 18px/1.8 var(--serif); white-space: nowrap; }
 .featured-insight { display: grid; grid-template-columns: 1.15fr .85fr; padding: 0; background: var(--wine); color: #fff; }
-.featured-art { min-height: 580px; display: flex; align-items: flex-end; padding: 42px; background: radial-gradient(circle at 35% 35%,rgba(255,230,215,.32),transparent 22%),conic-gradient(from 200deg at 50% 55%,#321014,#9c5056,#552129,#321014); }
+.featured-art { min-height: 580px; display: flex; align-items: flex-end; padding: 42px; background-image: linear-gradient(to top,rgba(21,12,14,.66),transparent 55%),url('../img/insights/cards/07-courage-to-build.webp'); background-position: center; background-size: cover; background-repeat: no-repeat; }
 .featured-art span { font-size: 11px; letter-spacing: .2em; }
 .featured-copy { padding: 85px 6vw; display: flex; flex-direction: column; justify-content: center; }
 .featured-copy>span { font-size: 11px; letter-spacing: .18em; opacity: .65; }
