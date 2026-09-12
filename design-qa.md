@@ -23,6 +23,12 @@
 - HTML parsed successfully and `git diff --check` returned no errors.
 - Asset version query strings bypass stale Cloudflare CSS and JavaScript caches.
 
+## Comparison history
+
+- Follow-up review found the featured-analysis photograph inheriting its intrinsic aspect-ratio height, leaving roughly 200px of visually unused space below the left-column call to action.
+- The desktop feature image is now constrained to 380px; the overlay card and chart were proportionally tightened while all labels and supporting copy remain visible.
+- Post-deployment review at 1285px confirmed that the “穿越噪音” copy and image columns now finish at comparable visual heights. Existing tablet and mobile minimum heights remain unchanged.
+
 ## Result
 
 final result: passed
