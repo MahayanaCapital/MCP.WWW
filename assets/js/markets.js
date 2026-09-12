@@ -1,79 +1,40 @@
 (() => {
-  const trendCanvas = document.querySelector('#marketTrendChart');
-  if (trendCanvas && window.Chart) {
-    new Chart(trendCanvas, {
-      type: 'line',
-      data: {
-        labels: ['Q4', 'Q1', 'Q2', 'Q3', 'Q4', 'Q1', 'Q2', 'Q3'],
-        datasets: [{
-          data: [100, 102, 101, 106, 109, 108, 114, 118],
-          borderColor: '#641f26',
-          backgroundColor: 'rgba(100,31,38,.08)',
-          fill: true,
-          borderWidth: 2,
-          pointRadius: 0,
-          tension: .28
-        }]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        animation: false,
-        plugins: { legend: { display: false }, tooltip: { enabled: false } },
-        scales: {
-          x: { grid: { display: false }, border: { display: false }, ticks: { color: '#806c64', font: { size: 9 } } },
-          y: { display: false, suggestedMin: 96, suggestedMax: 121 }
-        }
-      }
+  if (!window.Chart) return;
+  Chart.defaults.animation = false;
+  Chart.defaults.font.family = 'DM Sans, sans-serif';
+
+  const lineChart = (canvas, values, color, options = {}) => new Chart(canvas, {
+    type: 'line',
+    data: {
+      labels: values.map((_, index) => index + 1),
+      datasets: [{ data: values, borderColor: color, borderWidth: options.width || 1.5, pointRadius: 0, tension: .22, fill: false }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false }, tooltip: { enabled: false } },
+      scales: options.axes ? {
+        x: { grid: { display: false }, border: { color: '#bfb7ab' }, ticks: { maxTicksLimit: 5, color: '#776c66', font: { size: 8 }, callback: (_, index) => ['Sep', 'Dec', 'Mar', 'Jun', 'Sep'][Math.round(index / 2.75)] || '' } },
+        y: { position: 'left', grid: { color: 'rgba(50,40,35,.12)' }, border: { display: false }, ticks: { color: '#776c66', font: { size: 8 }, maxTicksLimit: 4 } }
+      } : { x: { display: false }, y: { display: false } }
+    }
+  });
+
+  document.querySelectorAll('.sparkline,.snapshot-chart').forEach((canvas) => {
+    const values = canvas.dataset.values.split(',').map(Number);
+    lineChart(canvas, values, canvas.classList.contains('downline') ? '#d64a57' : '#1769e0');
+  });
+
+  const feature = document.querySelector('#featureMarketChart');
+  if (feature) lineChart(feature, [4850,5010,5200,5380,5620,5790,6020,5880,6260,6480,6220,6710,6900,7350,7657], '#1769e0', { width: 2, axes: true });
+
+  document.querySelectorAll('.bar-chart').forEach((canvas) => {
+    const values = canvas.dataset.bars.split(',').map(Number);
+    new Chart(canvas, {
+      type: 'bar',
+      data: { labels: ['', ''], datasets: [{ data: values, backgroundColor: ['#c7d3dd', '#0e2945'], borderWidth: 0, barPercentage: .55, categoryPercentage: .8 }] },
+      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: { enabled: false } }, scales: { x: { display: false }, y: { display: false, beginAtZero: true } } },
+      plugins: [{ afterDatasetsDraw(chart) { const { ctx } = chart; ctx.save(); ctx.fillStyle = '#3f3834'; ctx.font = '9px DM Sans'; ctx.textAlign = 'center'; chart.getDatasetMeta(0).data.forEach((bar, index) => ctx.fillText(values[index].toLocaleString(), bar.x, bar.y - 5)); ctx.restore(); } }]
     });
-  }
-
-  const grid = document.querySelector('.global-market-grid');
-  if (!grid) return;
-
-  const locale = grid.dataset.locale || 'en';
-  const labels = {
-    en: ['Americas', 'Europe', 'Asia Pacific', 'Emerging Markets'],
-    'zh-TW': ['美洲市場', '歐洲市場', '亞太市場', '新興市場']
-  }[locale] || ['Americas', 'Europe', 'Asia Pacific', 'Emerging Markets'];
-  const descriptions = {
-    en: [
-      ['FOREXCOM:SPXUSD', 'S&P 500'], ['NASDAQ:NDX', 'Nasdaq 100'], ['FOREXCOM:DJI', 'Dow Jones'], ['TSX:TSX', 'Canada S&P/TSX'], ['BMFBOVESPA:IBOV', 'Brazil Bovespa'], ['BMV:ME', 'Mexico IPC']
-    ],
-    europe: [
-      ['INDEX:DEU40', 'Germany DAX'], ['TVC:UKX', 'UK FTSE 100'], ['EURONEXT:PX1', 'France CAC 40'], ['BME:IBC', 'Spain IBEX 35'], ['MIL:FTSEMIB', 'Italy FTSE MIB'], ['SIX:SMI', 'Switzerland SMI']
-    ],
-    asia: [
-      ['SSE:000001', 'Shanghai Composite'], ['HKEX:HSI', 'Hang Seng'], ['INDEX:NKY', 'Nikkei 225'], ['KRX:KOSPI', 'Korea KOSPI'], ['TWSE:TAIEX', 'Taiwan Weighted'], ['ASX:XJO', 'Australia ASX 200']
-    ],
-    emerging: [
-      ['NSE:NIFTY', 'India Nifty 50'], ['BIST:XU100', 'Türkiye BIST 100'], ['TADAWUL:TASI', 'Saudi Arabia TASI'], ['IDX:COMPOSITE', 'Indonesia Composite'], ['SET:SET', 'Thailand SET'], ['JSE:J200', 'South Africa Top 40']
-    ]
-  };
-  const regions = [descriptions.en, descriptions.europe, descriptions.asia, descriptions.emerging];
-  const tvLocale = locale === 'zh-TW' ? 'zh_TW' : 'en';
-
-  grid.replaceChildren();
-  regions.forEach((symbols, index) => {
-    const panel = document.createElement('article');
-    panel.className = 'market-region-panel';
-    const heading = document.createElement('h2');
-    heading.className = 'market-region-title';
-    heading.textContent = labels[index];
-    const widget = document.createElement('div');
-    widget.className = 'tradingview-widget-container';
-    widget.innerHTML = '<div class="tradingview-widget-container__widget"></div>';
-    const script = document.createElement('script');
-    script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js';
-    script.async = true;
-    script.textContent = JSON.stringify({
-      colorTheme: 'light', dateRange: '1M', locale: tvLocale, largeChartUrl: '',
-      isTransparent: true, showFloatingTooltip: true, showSymbolLogo: false,
-      showChart: true, width: '100%', height: '560',
-      tabs: [{ title: labels[index], symbols: symbols.map(([s, d]) => ({ s, d })) }]
-    });
-    widget.appendChild(script);
-    panel.append(heading, widget);
-    grid.appendChild(panel);
   });
 })();
