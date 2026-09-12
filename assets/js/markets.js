@@ -1,4 +1,33 @@
 (() => {
+  const trendCanvas = document.querySelector('#marketTrendChart');
+  if (trendCanvas && window.Chart) {
+    new Chart(trendCanvas, {
+      type: 'line',
+      data: {
+        labels: ['Q4', 'Q1', 'Q2', 'Q3', 'Q4', 'Q1', 'Q2', 'Q3'],
+        datasets: [{
+          data: [100, 102, 101, 106, 109, 108, 114, 118],
+          borderColor: '#641f26',
+          backgroundColor: 'rgba(100,31,38,.08)',
+          fill: true,
+          borderWidth: 2,
+          pointRadius: 0,
+          tension: .28
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        animation: false,
+        plugins: { legend: { display: false }, tooltip: { enabled: false } },
+        scales: {
+          x: { grid: { display: false }, border: { display: false }, ticks: { color: '#806c64', font: { size: 9 } } },
+          y: { display: false, suggestedMin: 96, suggestedMax: 121 }
+        }
+      }
+    });
+  }
+
   const grid = document.querySelector('.global-market-grid');
   if (!grid) return;
 
@@ -7,29 +36,22 @@
     en: ['Americas', 'Europe', 'Asia Pacific', 'Emerging Markets'],
     'zh-TW': ['美洲市場', '歐洲市場', '亞太市場', '新興市場']
   }[locale] || ['Americas', 'Europe', 'Asia Pacific', 'Emerging Markets'];
-  const tvLocale = { 'zh-TW': 'zh_TW' }[locale] || 'en';
-  const regions = [
-    [
-      ['FOREXCOM:SPXUSD', 'S&P 500'], ['NASDAQ:NDX', 'Nasdaq 100'],
-      ['FOREXCOM:DJI', 'Dow Jones'], ['TSX:TSX', 'Canada S&P/TSX'],
-      ['BMFBOVESPA:IBOV', 'Brazil Bovespa'], ['BMV:ME', 'Mexico IPC']
+  const descriptions = {
+    en: [
+      ['FOREXCOM:SPXUSD', 'S&P 500'], ['NASDAQ:NDX', 'Nasdaq 100'], ['FOREXCOM:DJI', 'Dow Jones'], ['TSX:TSX', 'Canada S&P/TSX'], ['BMFBOVESPA:IBOV', 'Brazil Bovespa'], ['BMV:ME', 'Mexico IPC']
     ],
-    [
-      ['INDEX:DEU40', 'Germany DAX'], ['TVC:UKX', 'UK FTSE 100'],
-      ['EURONEXT:PX1', 'France CAC 40'], ['BME:IBC', 'Spain IBEX 35'],
-      ['MIL:FTSEMIB', 'Italy FTSE MIB'], ['SIX:SMI', 'Switzerland SMI']
+    europe: [
+      ['INDEX:DEU40', 'Germany DAX'], ['TVC:UKX', 'UK FTSE 100'], ['EURONEXT:PX1', 'France CAC 40'], ['BME:IBC', 'Spain IBEX 35'], ['MIL:FTSEMIB', 'Italy FTSE MIB'], ['SIX:SMI', 'Switzerland SMI']
     ],
-    [
-      ['SSE:000001', 'Shanghai Composite'], ['HKEX:HSI', 'Hang Seng'],
-      ['INDEX:NKY', 'Nikkei 225'], ['KRX:KOSPI', 'Korea KOSPI'],
-      ['TWSE:TAIEX', 'Taiwan Weighted'], ['ASX:XJO', 'Australia ASX 200']
+    asia: [
+      ['SSE:000001', 'Shanghai Composite'], ['HKEX:HSI', 'Hang Seng'], ['INDEX:NKY', 'Nikkei 225'], ['KRX:KOSPI', 'Korea KOSPI'], ['TWSE:TAIEX', 'Taiwan Weighted'], ['ASX:XJO', 'Australia ASX 200']
     ],
-    [
-      ['NSE:NIFTY', 'India Nifty 50'], ['BIST:XU100', 'Türkiye BIST 100'],
-      ['TADAWUL:TASI', 'Saudi Arabia TASI'], ['IDX:COMPOSITE', 'Indonesia Composite'],
-      ['SET:SET', 'Thailand SET'], ['JSE:J200', 'South Africa Top 40']
+    emerging: [
+      ['NSE:NIFTY', 'India Nifty 50'], ['BIST:XU100', 'Türkiye BIST 100'], ['TADAWUL:TASI', 'Saudi Arabia TASI'], ['IDX:COMPOSITE', 'Indonesia Composite'], ['SET:SET', 'Thailand SET'], ['JSE:J200', 'South Africa Top 40']
     ]
-  ];
+  };
+  const regions = [descriptions.en, descriptions.europe, descriptions.asia, descriptions.emerging];
+  const tvLocale = locale === 'zh-TW' ? 'zh_TW' : 'en';
 
   grid.replaceChildren();
   regions.forEach((symbols, index) => {
