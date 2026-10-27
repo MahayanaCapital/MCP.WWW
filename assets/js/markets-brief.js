@@ -218,9 +218,9 @@
   const load = (base) => fetch(`${base}/api/brief?lang=${lang}`, { headers: { Accept: 'application/json' } })
     .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then((d) => { if (!d.quotes || !d.quotes.length) throw new Error('empty'); return d; });
-  // Same-origin on Cloudflare Pages; fall back to the Pages endpoint when served elsewhere.
+  // Same-origin on Cloudflare Pages; fall back to the official domain when served elsewhere.
   load('')
-    .catch(() => load('https://mahayanacap.pages.dev'))
+    .catch(() => load('https://www.mahayanacap.com'))
     .then(render)
     .catch(fail);
 })();
