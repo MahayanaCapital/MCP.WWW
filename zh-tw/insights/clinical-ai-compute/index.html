@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="臨床 AI 正從雲端走向床旁。隱私、延遲、功耗與監管，正在催生一套為醫療而生的算力體系。">
+  <title>為醫療而生的晶片 — MCP</title>
+  <link rel="canonical" href="https://www.mahayanacap.com/zh-tw/insights/clinical-ai-compute/">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/img/MCP_favicon_32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/img/MCP_favicon_16x16.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/mahayanacap.css?v=20261027">
+</head>
+<body class="article-page">
+  <header class="site-header navbar navbar-expand-lg" data-bss-component="navbar"><a class="brand logo-link" href="../../../zh-tw/#top" aria-label="MahayanaCap 首頁"><img class="site-logo" src="../../../assets/img/MAHAYANA_CAPITAL_logo_web_white_v2.png" alt="Mahayana Capital"></a><nav class="nav-links navbar-nav ms-auto align-items-lg-center" aria-label="主導航"><a class="nav-link" href="../../../zh-tw/#belief">投資理念</a><a class="nav-link" href="../../../zh-tw/#companies">被投企業</a><a class="nav-link" href="../">洞見</a><a class="nav-link" href="../../../zh-tw/markets/">市場</a><a class="nav-link" href="../../../zh-tw/team/">團隊</a><a class="nav-cta" href="mailto:hello@mahayanacap.com">與我們同行 ↗</a><a class="nav-link lang-switch" href="../../../insights/clinical-ai-compute/" aria-label="English version">EN</a></nav><button class="menu-button" aria-expanded="false" aria-label="打開菜單"><span></span><span></span></button></header>
+  <main>
+    <article>
+      <header class="article-hero container-fluid">
+        <a class="article-back" href="../">← 全部洞見</a>
+        <div class="article-label">產業洞察 · 醫療健康</div>
+        <h1>為醫療而生的晶片：臨床 AI 為何需要<span>專屬算力</span></h1>
+        <div class="article-deck">
+          <p>醫療 AI 正離開研究伺服器，走進影像設備、手術室與病床旁。隱私、延遲、功耗與監管這些醫療場景的硬約束，正在催生一套為醫療而生的算力體系。</p>
+          <div><span>Mahayana Research</span><span>2026 年 10 月 · 閱讀 11 分鐘</span></div>
+        </div>
+      </header>
+      <figure class="article-lead-image">
+        <img src="../../../assets/img/markets/ai-chip.webp" alt="AI 半導體晶片特寫">
+        <figcaption>當智能走到照護現場，底層硬體也成為臨床系統的一部分。</figcaption>
+      </figure>
+      <div class="article-layout container-fluid">
+        <aside class="article-aside">
+          <span>本文內容</span>
+          <ol>
+            <li><a href="#point-of-care">走向照護現場</a></li>
+            <li><a href="#constraints">醫療的四個約束</a></li>
+            <li><a href="#stack">全棧式的機會</a></li>
+            <li><a href="#questions">給創始人的問題</a></li>
+          </ol>
+        </aside>
+        <div class="article-body">
+          <p class="article-intro">第一波醫療 AI 建立在雲端，並以回顧性資料集評估。下一波將運行在照護發生的地方——影像設備、手術系統、穿戴裝置與醫院內網，這些場景無法依賴遠方的資料中心。</p>
+          <p>這一轉變改變了工程問題本身。一個在基準測試中表現良好的模型，如今必須在毫秒內給出結果、在有限功耗下運行、讓病患資料不離開院區，並接受監管機構對每一次輸出可解釋、可重現的要求。</p>
+
+          <section id="point-of-care">
+            <span class="article-section-number">01</span>
+            <h2>從資料中心到照護現場</h2>
+            <p>醫院正在把 AI 用於影像重建、分診、術中導引與連續監測。這些場景既對時間敏感，又是資料密集型。把原始影像或生理訊號傳到遠端叢集，會增加延遲、成本與風險。</p>
+            <blockquote>在醫療中，來得太晚的正確答案，就是錯誤答案。</blockquote>
+            <p>通用加速器是為訓練巨型模型和大規模消費應用而設計的，很少針對臨床場景特有的工作負載組合、認證要求與部署環境進行優化。這一缺口，正是專用醫療算力的起點。</p>
+          </section>
+
+          <section id="constraints">
+            <span class="article-section-number">02</span>
+            <h2>塑造算力體系的四個約束</h2>
+            <div class="moat-grid">
+              <div><b>01</b><h3>架構即隱私</h3><p>在設備端與院內完成推理，讓敏感資料留在機構內部，簡化在不同資料駐留規則下的合規工作。</p></div>
+              <div><b>02</b><h3>確定性延遲</h3><p>手術導引與即時影像需要可預測的回應時間，而不只是高平均吞吐量。</p></div>
+              <div><b>03</b><h3>功耗與體積</h3><p>可攜式超音波、穿戴裝置與床旁設備所需的每瓦效能，是資料中心硬體從未設計去滿足的。</p></div>
+              <div><b>04</b><h3>監管可追溯</h3><p>醫療器械必須經過驗證、版本管理並可稽核。軟硬體協同設計，能讓認證更快、更可靠。</p></div>
+            </div>
+          </section>
+
+          <section id="stack">
+            <span class="article-section-number">03</span>
+            <h2>機會在於全棧</h2>
+            <p>在醫療領域，單靠晶片很少能勝出。持久的企業會把高效晶片與模型平台、臨床級工具鏈，以及與器械廠商和醫院的深度關係結合起來。真正的價值，在於讓醫療器械團隊能簡單、安全地部署、驗證與更新 AI。</p>
+            <p>這有利於同時具備半導體工程與臨床理解、並且願意耐心走完漫長驗證週期的創始人。一旦嵌入經認證的設備或醫院流程，這樣的平台往往會長期留存。</p>
+            <blockquote>醫療 AI 硬體的防禦力，與其說來自電晶體，不如說來自信任、驗證與整合。</blockquote>
+          </section>
+
+          <section id="questions">
+            <span class="article-section-number">04</span>
+            <h2>我們會問創始人的五個問題</h2>
+            <ol class="founder-questions">
+              <li><span>01</span>你讓哪一種過去無法運行的臨床工作負載成為可能？</li>
+              <li><span>02</span>誰來整合你的平台——器械廠商、醫院，還是兩者？他們為什麼選擇你？</li>
+              <li><span>03</span>你的工具鏈如何縮短驗證與監管審查時間？</li>
+              <li><span>04</span>在真實臨床模型上，你的每瓦效能與每美元效能如何？</li>
+              <li><span>05</span>如何在現場更新模型，而不必全部重新認證？</li>
+            </ol>
+          </section>
+
+          <section class="article-conclusion">
+            <h2>醫療值得擁有自己的算力。</h2>
+            <p>每一個重要的運算應用最終都塑造了自己的硬體——圖形、行動裝置、雲端。醫療是下一個。我們支持那些從第一行晶片設計開始，就把安全、隱私與臨床現實視為設計輸入的團隊。</p>
+          </section>
+          <div class="article-signoff"><span>Mahayana Capital</span><span>與遠見者同行，共築偉大事業。</span></div>
+        </div>
+      </div>
+      <nav class="article-next container-fluid" aria-label="更多洞見">
+        <span>下一篇洞見</span>
+        <a href="../born-global/">生而全球，扎根在地：碎片化世界中的企業建設 <b>↗</b></a>
+      </nav>
+    </article>
+  </main>
+  <footer class="container-fluid" id="contact"><div class="footer-main"><p>偉大的旅程，<br/>從一次<span>對話</span>開始。</p><a class="nav-link" href="mailto:hello@mahayanacap.com">hello@mahayanacap.com ↗</a></div><div class="footer-bottom"><div class="brand footer-logo"><img class="site-logo" src="../../../assets/img/MAHAYANA_CAPITAL_logo_web_white_v2.png" alt="Mahayana Capital"></div><p>北京 · 上海 · 香港 · 紐約 · 舊金山</p><p>© 2026 Mahayana Capital Partners LLC</p></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/main.js"></script>
+</body>
+</html>

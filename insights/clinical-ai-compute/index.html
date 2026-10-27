@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Clinical AI is moving from the cloud to the bedside. Privacy, latency, power and regulation are creating a distinct compute stack for medicine.">
+  <title>Silicon for Medicine — MCP</title>
+  <link rel="canonical" href="https://www.mahayanacap.com/insights/clinical-ai-compute/">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/MCP_favicon_32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/MCP_favicon_16x16.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/mahayanacap.css?v=20261027">
+</head>
+<body class="article-page">
+  <header class="site-header navbar navbar-expand-lg" data-bss-component="navbar"><a class="brand logo-link" href="../../#top" aria-label="MahayanaCap Home"><img class="site-logo" src="../../assets/img/MAHAYANA_CAPITAL_logo_web_white_v2.png" alt="Mahayana Capital"></a><nav class="nav-links navbar-nav ms-auto align-items-lg-center" aria-label="Main navigation"><a class="nav-link" href="../../#belief">Approach</a><a class="nav-link" href="../../#companies">Companies</a><a class="nav-link" href="../">Insights</a><a class="nav-link" href="../../markets/">Markets</a><a class="nav-link" href="../../team/">Team</a><a class="nav-cta" href="mailto:hello@mahayanacap.com">Partner With Us ↗</a><a class="nav-link lang-switch" href="../../zh-tw/insights/clinical-ai-compute/" aria-label="繁體中文版">中文（繁體）</a></nav><button class="menu-button" aria-expanded="false" aria-label="Open menu"><span></span><span></span></button></header>
+  <main>
+    <article>
+      <header class="article-hero container-fluid">
+        <a class="article-back" href="../">← All insights</a>
+        <div class="article-label">SECTOR INSIGHT · HEALTHCARE</div>
+        <h1>Silicon for Medicine: Why Clinical AI Needs <em>Its Own Compute</em></h1>
+        <div class="article-deck">
+          <p>Medical AI is leaving the research server and entering the scanner, the operating room and the bedside. The constraints of care—privacy, latency, power and regulation—are giving rise to a distinct compute stack built for medicine.</p>
+          <div><span>Mahayana Research</span><span>October 2026 · 11 min read</span></div>
+        </div>
+      </header>
+      <figure class="article-lead-image">
+        <img src="../../assets/img/markets/ai-chip.webp" alt="Close-up of an AI semiconductor chip">
+        <figcaption>When intelligence moves to the point of care, the hardware underneath it becomes part of the clinical system.</figcaption>
+      </figure>
+      <div class="article-layout container-fluid">
+        <aside class="article-aside">
+          <span>IN THIS PERSPECTIVE</span>
+          <ol>
+            <li><a href="#point-of-care">To the point of care</a></li>
+            <li><a href="#constraints">Four constraints of medicine</a></li>
+            <li><a href="#stack">A full-stack opportunity</a></li>
+            <li><a href="#questions">Questions for founders</a></li>
+          </ol>
+        </aside>
+        <div class="article-body">
+          <p class="article-intro">The first wave of medical AI was built in the cloud and evaluated on retrospective datasets. The next wave will run where care happens—inside imaging devices, surgical systems, wearables and hospital networks that cannot depend on a distant data center.</p>
+          <p>That move changes the engineering problem. A model that performs well in a benchmark must now deliver results in milliseconds, on limited power, without patient data leaving the building, and under the scrutiny of regulators who expect every output to be explainable and reproducible.</p>
+
+          <section id="point-of-care">
+            <span class="article-section-number">01</span>
+            <h2>From the data center to the point of care</h2>
+            <p>Hospitals are adopting AI for image reconstruction, triage, intraoperative guidance and continuous monitoring. Each of these use cases is time-sensitive and data-intensive. Sending raw images or physiological streams to a remote cluster adds delay, cost and risk.</p>
+            <blockquote>In medicine, the right answer delivered too late is the wrong answer.</blockquote>
+            <p>General-purpose accelerators were designed for training giant models and serving consumer applications at scale. They are rarely optimized for the specific mix of workloads, certification requirements and deployment environments found in clinical settings. That gap is where purpose-built medical compute begins.</p>
+          </section>
+
+          <section id="constraints">
+            <span class="article-section-number">02</span>
+            <h2>Four constraints that shape the stack</h2>
+            <div class="moat-grid">
+              <div><b>01</b><h3>Privacy by architecture</h3><p>On-device and on-premise inference keeps sensitive data inside the institution, simplifying compliance across jurisdictions with different data-residency rules.</p></div>
+              <div><b>02</b><h3>Deterministic latency</h3><p>Surgical guidance and real-time imaging require predictable response times, not just high average throughput.</p></div>
+              <div><b>03</b><h3>Power and form factor</h3><p>Portable ultrasound, wearables and bedside devices need performance per watt that data-center hardware was never designed to deliver.</p></div>
+              <div><b>04</b><h3>Regulatory traceability</h3><p>Medical devices must be validated, versioned and auditable. Hardware and software that are co-designed make certification faster and more reliable.</p></div>
+            </div>
+          </section>
+
+          <section id="stack">
+            <span class="article-section-number">03</span>
+            <h2>The opportunity is full-stack</h2>
+            <p>Chips alone rarely win in healthcare. Durable companies will pair efficient silicon with a model platform, clinical-grade toolchains and deep relationships with device makers and hospitals. The value lies in making it simple for a medical-device team to deploy, validate and update AI safely.</p>
+            <p>This favors founders who combine semiconductor engineering with clinical understanding—and who are patient enough to navigate long qualification cycles. Once embedded inside a certified device or hospital workflow, such platforms tend to stay for years.</p>
+            <blockquote>The defensibility of medical AI hardware comes less from transistors than from trust, validation and integration.</blockquote>
+          </section>
+
+          <section id="questions">
+            <span class="article-section-number">04</span>
+            <h2>Five questions we ask founders</h2>
+            <ol class="founder-questions">
+              <li><span>01</span>Which clinical workload do you make possible that could not run before?</li>
+              <li><span>02</span>Who integrates your platform—device makers, hospitals or both—and why will they choose you?</li>
+              <li><span>03</span>How does your toolchain shorten validation and regulatory review?</li>
+              <li><span>04</span>What is your performance per watt and per dollar on real clinical models?</li>
+              <li><span>05</span>How will you update models in the field without re-certifying everything?</li>
+            </ol>
+          </section>
+
+          <section class="article-conclusion">
+            <h2>Medicine deserves its own computing.</h2>
+            <p>Every major application of computing eventually shaped its own hardware—graphics, mobile, the cloud. Healthcare is next. We are backing teams that treat safety, privacy and clinical reality as design inputs from the very first line of silicon.</p>
+          </section>
+          <div class="article-signoff"><span>Mahayana Capital</span><span>Backing bold founders. Building to endure.</span></div>
+        </div>
+      </div>
+      <nav class="article-next container-fluid" aria-label="More insights">
+        <span>NEXT PERSPECTIVE</span>
+        <a href="../born-global/">Born Global, Built Local: Company-Building in a Fragmented World <b>↗</b></a>
+      </nav>
+    </article>
+  </main>
+  <footer class="container-fluid" id="contact"><div class="footer-main"><p>Every great journey<br/>starts with a <span>conversation.</span></p><a class="nav-link" href="mailto:hello@mahayanacap.com">hello@mahayanacap.com ↗</a></div><div class="footer-bottom"><div class="brand footer-logo"><img class="site-logo" src="../../assets/img/MAHAYANA_CAPITAL_logo_web_white_v2.png" alt="Mahayana Capital"></div><p>Beijing · Shanghai · Hong Kong · New York · San Francisco</p><p>© 2026 Mahayana Capital Partners LLC</p></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

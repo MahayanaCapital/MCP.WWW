@@ -303,6 +303,9 @@ html[lang="zh-TW"] .featured-copy h2 { font-size: clamp(32px, 3vw, 44px); white-
 .insight-card-04 { background-image: url('../img/insights/cards/04-ai-power-demand.webp'); }
 .insight-card-05 { background-image: url('../img/insights/cards/05-lab-to-global-product.webp'); }
 .insight-card-06 { background-image: url('../img/insights/cards/06-long-term-capital.webp'); }
+.insight-card-08 { background-image: url('../img/insights/code-to-era.webp'); }
+.insight-card-09 { background-image: url('../img/markets/ai-chip.webp'); }
+.insight-card-10 { background-image: url('../img/markets/global-port.webp'); }
 .insight-meta { padding: 24px 8px 42px 0; }
 .insight-meta>span { font-size: 10px; letter-spacing: .12em; color: #816d66; }
 .insight-meta h2 { font: 600 25px/1.35 var(--serif); margin: 16px 0; }
