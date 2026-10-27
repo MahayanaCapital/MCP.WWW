@@ -306,6 +306,9 @@ html[lang="zh-TW"] .featured-copy h2 { font-size: clamp(32px, 3vw, 44px); white-
 .insight-card-08 { background-image: url('../img/insights/code-to-era.webp'); }
 .insight-card-09 { background-image: url('../img/markets/ai-chip.webp'); }
 .insight-card-10 { background-image: url('../img/markets/global-port.webp'); }
+.insight-card-11 { background-image: url('../img/companies/orbital-manufacturing.webp'); }
+.insight-card-12 { background-image: url('../img/insights/complexity-to-simplicity.webp'); }
+.insight-card-13 { background-image: url('../img/companies/solace-life-sciences.webp'); }
 .insight-meta { padding: 24px 8px 42px 0; }
 .insight-meta>span { font-size: 10px; letter-spacing: .12em; color: #816d66; }
 .insight-meta h2 { font: 600 25px/1.35 var(--serif); margin: 16px 0; }
